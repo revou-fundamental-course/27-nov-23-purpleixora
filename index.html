@@ -12,8 +12,8 @@
     <header id="navigation-bar">
         <h1 id="logo">Welcome to Kalkulator Segitiga</h1>
         <nav class="navigation">
-            <a href="">Luas Segitiga</a>
-            <a href="">Keliling Segitiga</a>
+            <a href="#luas">Luas Segitiga</a>
+            <a href="#keliling">Keliling Segitiga</a>
         </nav>
     </header>
 
@@ -23,54 +23,59 @@
         </h6>
     </div>
 
-    <div class="triangle-area">
-        <div class="question-image">
-            <img src="images/Luas Segitiga.jpg" alt="Luas Segitiga" width="300" height="300">
-        </div>
-
-        <div class="judul-luas">Hitung Luas Segitiga</div>
-
-
-        <div class="input-triangle-area">
-            <label for="input-height" id="area-height">Tinggi</label>
-            <input type="number" id="input-heights" class="katik-input">
-
-            <label for="input-base" id="area-base">Alas</label>
-            <input type="number" id="input-base" class="katik-input">
-
-            <div class="buttons">
-                <button id="triangle-area-button">Hitung</button>
-                <button id="button-area-reset">Reset</button>
-            </div>
-        </div>
-        <p id="result"></p>
-    </div>
-
-    <div class="triangle-perimeter">
-        <div class="question-image">
-            <img src="images/Keliling Segitiga.jpg" alt="Keliling Segitiga" width="300" height="300">
-        </div>
-
-        <div class="judul-keliling">Hitung Keliling Segitiga</div>
-
-
-        <div class="input-triangle-perimeter">
-            <label for="input-S1" id="S1">Sisi A</label>
-            <input type="number" id="input-S1" class="katik-input">
-
-            <label for="input-S2" id="S2">Sisi B</label>
-            <input type="number" id="input-S2" class="katik-input">
-
-            <label for="input-S3" id="S3">Sisi C</label>
-            <input type="number" id="input-S3" class="katik-input">
-
-            <div class="buttons">
-                <button id="triangle-perimeter-button">Hitung</button>
-                <button id="button-perimeter-reset">Reset</button>
+    <div class="tab-content" id="luas">
+        <div class="triangle-area">
+            <div class="question-image">
+                <img src="images/Luas Segitiga.jpg" alt="Luas Segitiga" width="300" height="300">
             </div>
 
+            <div class="judul-luas">Hitung Luas Segitiga</div>
+
+
+            <div class="input-triangle-area">
+                <label for="input-height" id="area-height">Tinggi</label>
+                <input type="number" id="input-heights" class="katik-input">
+
+                <label for="input-base" id="area-base">Alas</label>
+                <input type="number" id="input-base" class="katik-input">
+
+                <div class="buttons">
+                    <button id="triangle-area-button">Hitung</button>
+                    <button id="button-area-reset">Reset</button>
+                </div>
+            </div>
+            <p id="result"></p>
         </div>
     </div>
+
+
+    <div class="tab-content" id="keliling">
+        <div class="triangle-perimeter">
+            <div class="question-image">
+                <img src="images/Keliling Segitiga.jpg" alt="Keliling Segitiga" width="300" height="300">
+            </div>
+
+            <div class="judul-keliling">Hitung Keliling Segitiga</div>
+
+            <div class="input-triangle-perimeter">
+                <label for="input-S1" id="S1">Sisi A</label>
+                <input type="number" id="input-S1" class="katik-input">
+
+                <label for="input-S2" id="S2">Sisi B</label>
+                <input type="number" id="input-S2" class="katik-input">
+
+                <label for="input-S3" id="S3">Sisi C</label>
+                <input type="number" id="input-S3" class="katik-input">
+
+                <div class="buttons">
+                    <button id="triangle-perimeter-button">Hitung</button>
+                    <button id="button-perimeter-reset">Reset</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 
 </body>

@@ -62,8 +62,69 @@ class Triangle {
         });
 
     }
+
+    resetPerimeter(id) {
+        document.getElementById(id).addEventListener("click", (event) => {
+            event.preventDefault();
+
+            document.getElementById("input-S1").value = "";
+            document.getElementById("input-S2").value = "";
+            document.getElementById("input-S3").value = "";
+        })
+    }
+
+    resetArea(id) {
+        document.getElementById(id).addEventListener("click", (event) => {
+            event.preventDefault();
+
+            document.getElementById("input-heights").value = "";
+            document.getElementById("input-base").value = "";
+        })
+    }
 }
 
 const action = new Triangle();
 action.hitungLuas("input-base", "input-heights");
 action.hitungKeliling("input-S1", "input-S2", "input-S3");
+action.resetPerimeter("button-perimeter-reset")
+action.resetArea("button-area-reset")
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const tabs = document.querySelectorAll('.navigation a');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', switchTab);
+    });
+
+
+    tabs[0].click();
+});
+
+function switchTab(event) {
+    event.preventDefault();
+
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.style.display = 'none';
+    });
+
+
+    const tabs = document.querySelectorAll('.navigation a');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    const clickedTab = event.target;
+    clickedTab.classList.add('active');
+
+    const tabId = clickedTab.getAttribute('href').substring(1);
+    const activeTabContent = document.getElementById(tabId);
+    activeTabContent.style.display = 'block';
+
+    if (tabId === 'luas') {
+        action.hitungLuas("input-base", "input-heights");
+    } else if (tabId === 'keliling') {
+        action.hitungKeliling("input-S1", "input-S2", "input-S3");
+    }
+}
